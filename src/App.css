@@ -2,3 +2,16 @@
     padding: 0px 50px;
     text-align: center;
 }
+
+.gallery-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    width: 25%;
+}
+
+.modal-button {
+    padding: 50px;
+}
