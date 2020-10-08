@@ -1,18 +1,22 @@
 const Pictures = [
     {
-        name: "picture 1",
+        pk: 1,
+        name: "picture",
         url: "http://via.placeholder.com/300x300.png?text=Placeholder%201"
     },
     {
-        name: "picture 2",
+        pk: 2,
+        name: "picture",
         url: "http://via.placeholder.com/300x300.png?text=Placeholder%202"
     },
     {
-        name: "picture 3",
+        pk: 3,
+        name: "picture",
         url: "http://via.placeholder.com/300x300.png?text=Placeholder%203"
     },
     {
-        name: "picture 4",
+        pk: 4,
+        name: "picture",
         url: "http://via.placeholder.com/300x300.png?text=Placeholder%204"
     },
 ]
