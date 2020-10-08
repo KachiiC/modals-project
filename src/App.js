@@ -1,26 +1,25 @@
 import React,{useState} from 'react';
 // CSS
 import './App.css';
-import Modal from './Modals'
-import Pictures from './Modals/PictureData'
 // Components
-import Gallery from './Gallery'
+import Modal from './Modals/modal'
+import Pictures from './Modals/PictureData'
 
 function App() {
 
-  const [status, setStatus] = useState(false);
+  const [showModal, setShowModal] = useState(false);
   const [result, setResult] = useState([])
 
   const displayPictures = Pictures.map((picture) => {
 
     const rename = () =>  setResult(picture) 
-    const changeStatus = () => setStatus(true)
+    const changeVisibility = () => setShowModal(true)
 
     return (
       <>
         <div className="gallery-item">
             <h1>{picture.name}</h1>
-            <img src={picture.url} alt={picture.name} onClick={() => {changeStatus();rename()}} />
+            <img src={picture.url} alt={picture.name} onClick={() => {changeVisibility();rename()}} />
         </div>
       </>
         
@@ -29,18 +28,19 @@ function App() {
 
   return (
       <>
-        { status && (
-          <Modal closeModal={() => setStatus(false)}>
-            <h1>{result.name}</h1>
-            <img src={result.url} alt={result.name} />
+        { showModal && (
+          <Modal closeModal={() => setShowModal(false)}>
+            <div className="modal-content">
+              <h2>{result.name}</h2>
+              <img src={result.url} alt={result.name} />
+            </div>
           </Modal>
         )}
-          <div className="site-container">
-            <div className="gallery-row">
-              {displayPictures}
-            </div>
+        <div className="site-container">
+          <div className="gallery-row">
+            {displayPictures}
           </div>
-
+        </div>
       </>
   );
 }

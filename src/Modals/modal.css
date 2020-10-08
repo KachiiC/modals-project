@@ -16,7 +16,17 @@
     margin: 100px auto;
     background-color: white;
     border-radius: 0.25rem;
-    width: 50vw;
-    padding: 2rem;
-    position: relative;
+    width: 70%;
+    height: 70%;
+    padding: 20px;
+    text-align: center;
   }
+
+.close-button-container {
+    text-align: right;
+}
+
+.close-button{
+    cursor: pointer;
+    width: 10px;
+}
